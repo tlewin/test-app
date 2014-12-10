@@ -1,0 +1,9 @@
+<div class="todo-item">
+  <div class="todo-item-title">
+    {{todoTitle}}
+    <state-button state="showDescription" class="td-show-description"><span></span></state-button>
+  </div>
+  <div class="todo-item-description" ng-show="showDescription">
+    {{todoDescription}}
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="to-do">
+  <h1>Yet Another TODO app</h1>
+  <form class="mb10" name="todoForm" novalidate ng-submit="addToDoItem(todoForm)">
+    <div class="row">
+      <input type="text" ng-model="todoItem.title" placeholder="Title" td-focus required>
+    </div>
+    <div class="row">
+      <textarea rows="3" ng-model="todoItem.description" placeholder="Description" required></textarea>
+    </div>
+    <input type="submit" value="Add item" ng-disabled="todoForm.$invalid">
+  </form>
+  <h2 class="mb10">Total items: {{todoItems.length}}</h2>
+  <ul class="todo-list">
+    <li ng-repeat="item in todoItems">
+      <todo-item todo-title="item.title" todo-description="item.description">
+    </li>
+  </ul>
+</div>
